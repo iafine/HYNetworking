@@ -14,6 +14,7 @@
 		9609A73A1D6EBD2500F11E76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9609A7381D6EBD2500F11E76 /* Main.storyboard */; };
 		9609A73C1D6EBD2500F11E76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9609A73B1D6EBD2500F11E76 /* Assets.xcassets */; };
 		9609A73F1D6EBD2500F11E76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9609A73D1D6EBD2500F11E76 /* LaunchScreen.storyboard */; };
+		9609A74A1D6EC4F300F11E76 /* HYAPIProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9609A7491D6EC4F300F11E76 /* HYAPIProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		9609A73B1D6EBD2500F11E76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9609A73E1D6EBD2500F11E76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9609A7401D6EBD2500F11E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9609A7481D6EC4F300F11E76 /* HYAPIProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYAPIProxy.h; path = HYNetworking/APIProxy/HYAPIProxy.h; sourceTree = "<group>"; };
+		9609A7491D6EC4F300F11E76 /* HYAPIProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HYAPIProxy.m; path = HYNetworking/APIProxy/HYAPIProxy.m; sourceTree = "<group>"; };
 		AD4E8F17EEE3E71E6454968F /* Pods-HYNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYNetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HYNetworking/Pods-HYNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,8 +110,18 @@
 		9609A7461D6EBF0100F11E76 /* HYNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				9609A7471D6EC4C100F11E76 /* APIProxy */,
 			);
 			name = HYNetworking;
+			sourceTree = "<group>";
+		};
+		9609A7471D6EC4C100F11E76 /* APIProxy */ = {
+			isa = PBXGroup;
+			children = (
+				9609A7481D6EC4F300F11E76 /* HYAPIProxy.h */,
+				9609A7491D6EC4F300F11E76 /* HYAPIProxy.m */,
+			);
+			name = APIProxy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9609A74A1D6EC4F300F11E76 /* HYAPIProxy.m in Sources */,
 				9609A7371D6EBD2500F11E76 /* ViewController.m in Sources */,
 				9609A7341D6EBD2500F11E76 /* AppDelegate.m in Sources */,
 				9609A7311D6EBD2500F11E76 /* main.m in Sources */,
