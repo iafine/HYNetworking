@@ -19,6 +19,7 @@
 		96C43A181D74083D002A7373 /* HYBaseRequestManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A171D74083D002A7373 /* HYBaseRequestManagerFactory.m */; };
 		96C43A1D1D740CC9002A7373 /* HYCustomRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A1C1D740CC9002A7373 /* HYCustomRequest.m */; };
 		96C43A211D740E73002A7373 /* HYAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A201D740E73002A7373 /* HYAppContext.m */; };
+		96C43A251D7437C5002A7373 /* HYCommonParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A241D7437C5002A7373 /* HYCommonParams.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		96C43A1C1D740CC9002A7373 /* HYCustomRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HYCustomRequest.m; path = HYNetworkingCustom/CustomRequest/HYCustomRequest.m; sourceTree = "<group>"; };
 		96C43A1F1D740E73002A7373 /* HYAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAppContext.h; sourceTree = "<group>"; };
 		96C43A201D740E73002A7373 /* HYAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAppContext.m; sourceTree = "<group>"; };
+		96C43A231D7437C5002A7373 /* HYCommonParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYCommonParams.h; path = HYNetworking/CommonParams/HYCommonParams.h; sourceTree = "<group>"; };
+		96C43A241D7437C5002A7373 /* HYCommonParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HYCommonParams.m; path = HYNetworking/CommonParams/HYCommonParams.m; sourceTree = "<group>"; };
 		AD4E8F17EEE3E71E6454968F /* Pods-HYNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYNetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HYNetworking/Pods-HYNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +126,7 @@
 		9609A7461D6EBF0100F11E76 /* HYNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				96C43A221D743786002A7373 /* CommonParams */,
 				96C43A121D7400A6002A7373 /* RequestManager */,
 				9609A7471D6EC4C100F11E76 /* APIProxy */,
 			);
@@ -175,6 +179,15 @@
 			);
 			name = AppContext;
 			path = HYNetworkingCustom/AppContext;
+			sourceTree = "<group>";
+		};
+		96C43A221D743786002A7373 /* CommonParams */ = {
+			isa = PBXGroup;
+			children = (
+				96C43A231D7437C5002A7373 /* HYCommonParams.h */,
+				96C43A241D7437C5002A7373 /* HYCommonParams.m */,
+			);
+			name = CommonParams;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +314,7 @@
 				96C43A211D740E73002A7373 /* HYAppContext.m in Sources */,
 				9609A74A1D6EC4F300F11E76 /* HYAPIProxy.m in Sources */,
 				96C43A1D1D740CC9002A7373 /* HYCustomRequest.m in Sources */,
+				96C43A251D7437C5002A7373 /* HYCommonParams.m in Sources */,
 				96C43A181D74083D002A7373 /* HYBaseRequestManagerFactory.m in Sources */,
 				9609A7371D6EBD2500F11E76 /* ViewController.m in Sources */,
 				96C43A151D7400D9002A7373 /* HYBaseRequestManager.m in Sources */,

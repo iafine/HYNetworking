@@ -9,6 +9,7 @@
 #import "HYBaseRequestManager.h"
 #import "HYBaseRequestManagerFactory.h"
 #import "AFURLRequestSerialization.h"
+#import "HYCommonParams.h"
 
 @interface HYBaseRequestManager()
 
@@ -31,14 +32,25 @@
 
 #pragma mark - public methods
 - (NSURLRequest *)GETRequestWithRequestParams:(NSDictionary *)requestParams methodName:(NSString *)methodName {
+    
     HYBaseRequestManager *requestService = [[HYBaseRequestManagerFactory sharedInstance] generatorRequestService];
+    
+    NSParameterAssert(requestService.apiBaseUrl);
+    
     NSString *requestUrl;
     if (requestService.apiVersion.length != 0) {
         requestUrl = [NSString stringWithFormat:@"%@/%@/%@", requestService.apiBaseUrl, requestService.apiVersion, methodName];
     }else {
         requestUrl = [NSString stringWithFormat:@"%@/%@", requestService.apiBaseUrl, methodName];
     }
-    NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"GET" URLString:requestUrl parameters:requestParams error:nil];
+    
+    // 构建公共入参
+    NSMutableDictionary *completeParams = [NSMutableDictionary new];
+    [completeParams addEntriesFromDictionary:requestParams];
+    [completeParams addEntriesFromDictionary:[HYCommonParams generatorGETRequestCommonParams]];
+    
+    NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"GET" URLString:requestUrl parameters:completeParams error:nil];
+    
     return request;
 }
 
