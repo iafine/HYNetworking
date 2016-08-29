@@ -8,6 +8,7 @@
 
 #import "HYAPIProxy.h"
 #import <AFNetworking/AFNetworking.h>
+#import "HYBaseRequestManager.h"
 
 @interface HYAPIProxy()
 
@@ -32,13 +33,7 @@
 
 - (NSInteger)getWithPamrams:(NSDictionary *)params methodName:(NSString *)methodName success:(HYCallBack)success fail:(HYCallBack)fail {
     
-    // request这块代码要拿出去，进行封装，实现自定义request
-    NSString *baseUrl = @"http://www.test.com";
-    NSString *urlString = [NSString stringWithFormat:@"%@/%@", baseUrl, methodName];
-    AFHTTPRequestSerializer *requestSerializer = [AFHTTPRequestSerializer serializer];
-    requestSerializer.timeoutInterval = 20.0;
-    requestSerializer.cachePolicy = NSURLRequestUseProtocolCachePolicy;
-    NSMutableURLRequest *request = [requestSerializer requestWithMethod:@"GET" URLString:urlString parameters:params error:nil];
+    NSURLRequest *request = [[HYBaseRequestManager sharedInstance] GETRequestWithRequestParams:params methodName:methodName];
     
     NSNumber *requestID = [self startRequestWithRequest:request success:success fail:fail];
     return [requestID integerValue];
