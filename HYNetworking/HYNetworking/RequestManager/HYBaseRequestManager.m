@@ -10,6 +10,7 @@
 #import "HYBaseRequestManagerFactory.h"
 #import "AFURLRequestSerialization.h"
 #import "HYCommonParams.h"
+#import "NSURLRequest+HYNetworkingMethods.h"
 
 @interface HYBaseRequestManager()
 
@@ -20,14 +21,17 @@
 @implementation HYBaseRequestManager
 
 #pragma mark - life cycle
-- (instancetype)init {
-    self = [super init];
-    if (self) {
+
++ (instancetype)sharedInstance {
+    static dispatch_once_t onceToken;
+    static HYBaseRequestManager *sharedInstance;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[HYBaseRequestManager alloc] init];
         if ([self conformsToProtocol:@protocol(HYBaseRequestManagerService)]) {
-            self.service = (id<HYBaseRequestManagerService>)self;
+            sharedInstance.service = (id<HYBaseRequestManagerService>)self;
         }
-    }
-    return self;
+    });
+    return sharedInstance;
 }
 
 #pragma mark - public methods
@@ -50,6 +54,7 @@
     [completeParams addEntriesFromDictionary:[HYCommonParams generatorGETRequestCommonParams]];
     
     NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"GET" URLString:requestUrl parameters:completeParams error:nil];
+    request.hy_requestParams = completeParams;
     
     return request;
 }

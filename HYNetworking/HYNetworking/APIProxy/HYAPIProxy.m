@@ -56,21 +56,15 @@
         NSNumber *requestID = @([dataTask taskIdentifier]);
         [self.requestList removeObjectForKey:requestID];
         
-        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
         NSData *responseData = responseObject;
-        NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
         if (error) {
-            // 请求失败, 打印log，这块要进行封装，使得log更加易读
             NSLog(@"error");
-            NSURLResponse *HYResponse = response;
-            // 回调
-            fail ? fail(HYResponse) : nil;
+            HYResponseManager *response = [[HYResponseManager alloc] initWithRequest:request requestID:requestID responseData:responseData error:error];
+            fail ? fail(response) : nil;
         }else {
-            //打印log，回调 要封装
             NSLog(@"success");
-            NSURLResponse *HYResponse = response;
-            
-            success ? success(HYResponse) : nil;
+            HYResponseManager *response = [[HYResponseManager alloc] initWithRequest:request requestID:requestID responseData:responseData error:nil];
+            success ? success(response) : nil;
         }
     }];
     NSNumber *requestID = @([dataTask taskIdentifier]);

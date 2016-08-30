@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HYResponseManager.h"
 
-typedef void(^HYCallBack)(NSURLResponse *response);
+typedef void(^HYCallBack)(HYResponseManager *response);
 
 @interface HYAPIProxy : NSObject
 
