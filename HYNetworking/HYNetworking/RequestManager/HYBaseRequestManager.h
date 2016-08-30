@@ -34,6 +34,17 @@
 
 + (instancetype)sharedInstance;
 
-- (NSURLRequest *)GETRequestWithRequestParams:(NSDictionary *)requestParams methodName:(NSString *)methodName;
+/**
+ *  @author hyyy, 16-08-30 17:08:40
+ *
+ *  @brief 初始化GET请求
+ *
+ *  @param requestParams params
+ *  @param methodName    method name
+ *
+ *  @return NSURLRequest
+ */
+- (NSURLRequest *)GETRequestWithRequestParams:(NSDictionary *)requestParams
+                                   methodName:(NSString *)methodName;
 
 @end

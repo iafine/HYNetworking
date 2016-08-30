@@ -10,6 +10,11 @@
 
 @interface NSURLRequest (HYNetworkingMethods)
 
+/**
+ *  @author hyyy, 16-08-30 17:08:26
+ *
+ *  @brief add request params property
+ */
 @property (copy, nonatomic) NSDictionary *hy_requestParams;
 
 @end

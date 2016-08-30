@@ -21,17 +21,23 @@
 @implementation HYBaseRequestManager
 
 #pragma mark - life cycle
-
 + (instancetype)sharedInstance {
     static dispatch_once_t onceToken;
     static HYBaseRequestManager *sharedInstance;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[HYBaseRequestManager alloc] init];
-        if ([self conformsToProtocol:@protocol(HYBaseRequestManagerService)]) {
-            sharedInstance.service = (id<HYBaseRequestManagerService>)self;
-        }
     });
     return sharedInstance;
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        if ([self conformsToProtocol:@protocol(HYBaseRequestManagerService)]) {
+            self.service = (id<HYBaseRequestManagerService>)self;
+        }
+    }
+    return self;
 }
 
 #pragma mark - public methods

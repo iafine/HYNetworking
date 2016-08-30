@@ -13,6 +13,13 @@
 
 + (instancetype)sharedInstance;
 
+/**
+ *  @author hyyy, 16-08-30 17:08:15
+ *
+ *  @brief 工厂模式代理
+ *
+ *  @return <#return value description#>
+ */
 - (HYBaseRequestManager<HYBaseRequestManagerService> *)generatorRequestService;
 
 @end

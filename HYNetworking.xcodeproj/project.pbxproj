@@ -22,6 +22,7 @@
 		96C43A251D7437C5002A7373 /* HYCommonParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A241D7437C5002A7373 /* HYCommonParams.m */; };
 		96C43A291D752963002A7373 /* HYResponseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A281D752963002A7373 /* HYResponseManager.m */; };
 		96C43A2D1D7530E0002A7373 /* NSURLRequest+HYNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A2C1D7530E0002A7373 /* NSURLRequest+HYNetworkingMethods.m */; };
+		96C43A311D758550002A7373 /* HYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A301D758550002A7373 /* HYLogger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		96C43A281D752963002A7373 /* HYResponseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HYResponseManager.m; path = HYNetworking/ResponseManager/HYResponseManager.m; sourceTree = "<group>"; };
 		96C43A2B1D7530E0002A7373 /* NSURLRequest+HYNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+HYNetworkingMethods.h"; path = "HYNetworking/Categories/NSURLRequest+HYNetworkingMethods.h"; sourceTree = "<group>"; };
 		96C43A2C1D7530E0002A7373 /* NSURLRequest+HYNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURLRequest+HYNetworkingMethods.m"; path = "HYNetworking/Categories/NSURLRequest+HYNetworkingMethods.m"; sourceTree = "<group>"; };
+		96C43A2F1D758550002A7373 /* HYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYLogger.h; path = HYNetworking/Logger/HYLogger.h; sourceTree = "<group>"; };
+		96C43A301D758550002A7373 /* HYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HYLogger.m; path = HYNetworking/Logger/HYLogger.m; sourceTree = "<group>"; };
 		AD4E8F17EEE3E71E6454968F /* Pods-HYNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYNetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HYNetworking/Pods-HYNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +135,7 @@
 		9609A7461D6EBF0100F11E76 /* HYNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				96C43A2E1D7584C4002A7373 /* Logger */,
 				96C43A2A1D753059002A7373 /* Categories */,
 				96C43A261D752941002A7373 /* ResponseManager */,
 				96C43A221D743786002A7373 /* CommonParams */,
@@ -214,6 +218,15 @@
 				96C43A2C1D7530E0002A7373 /* NSURLRequest+HYNetworkingMethods.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		96C43A2E1D7584C4002A7373 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				96C43A2F1D758550002A7373 /* HYLogger.h */,
+				96C43A301D758550002A7373 /* HYLogger.m */,
+			);
+			name = Logger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +352,7 @@
 			files = (
 				96C43A211D740E73002A7373 /* HYAppContext.m in Sources */,
 				9609A74A1D6EC4F300F11E76 /* HYAPIProxy.m in Sources */,
+				96C43A311D758550002A7373 /* HYLogger.m in Sources */,
 				96C43A1D1D740CC9002A7373 /* HYCustomRequest.m in Sources */,
 				96C43A291D752963002A7373 /* HYResponseManager.m in Sources */,
 				96C43A251D7437C5002A7373 /* HYCommonParams.m in Sources */,

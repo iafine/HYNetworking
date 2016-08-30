@@ -13,13 +13,6 @@ typedef void(^HYCallBack)(HYResponseManager *response);
 
 @interface HYAPIProxy : NSObject
 
-/**
- *  @author hyyy, 16-08-25 15:08:53
- *
- *  @brief 单例方法
- *
- *  @return instancetype
- */
 + (instancetype)sharedInstance;
 
 /**
@@ -34,6 +27,9 @@ typedef void(^HYCallBack)(HYResponseManager *response);
  *
  *  @return requestID
  */
-- (NSInteger)getWithPamrams:(NSDictionary *)params methodName:(NSString *)methodName success:(HYCallBack)success fail:(HYCallBack)fail;
+- (NSInteger)getWithPamrams:(NSDictionary *)params
+                 methodName:(NSString *)methodName
+                    success:(HYCallBack)success
+                       fail:(HYCallBack)fail;
 
 @end
