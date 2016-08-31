@@ -30,6 +30,26 @@
     }
 }
 
+- (BOOL)isOnline {
+    return YES;
+}
+
+- (NSString *)offlineApiBaseUrl {
+    return @"http://news-at.zhihu.com/api";
+}
+
+- (NSString *)onlineApiBaseUrl {
+    return @"http://news-at.zhihu.com/api";
+}
+
+- (NSString *)offlineApiVersion {
+    return @"4";
+}
+
+- (NSString *)onlineApiVersion {
+    return @"4";
+}
+
 - (NSString *)deviceName {
     return [[UIDevice currentDevice] name];
 }

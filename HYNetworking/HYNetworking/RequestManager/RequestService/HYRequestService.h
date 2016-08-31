@@ -1,19 +1,20 @@
 //
-//  HYRequestManager.h
+//  HYRequestService.h
 //  HYNetworking
-//  (基础请求封装类，通过继承实现具体功能)
-//  Created by work on 16/8/29.
+//
+//  Created by work on 16/8/31.
 //  Copyright © 2016年 hyyy. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+
 
 /**
  *  @author hyyy, 16-08-29 14:08:32
  *
  *  @brief 请求相关的服务协议，子类需要重写该协议
  */
-@protocol HYBaseRequestManagerService <NSObject>
+@protocol HYRequestServiceProtocol <NSObject>
 
 @property (assign, nonatomic, readonly) BOOL isOnline;
 
@@ -25,26 +26,9 @@
 
 @end
 
-@interface HYBaseRequestManager : NSObject
+@interface HYRequestService : NSObject
 
 @property (strong, nonatomic, readonly) NSString *apiBaseUrl;
 @property (strong, nonatomic, readonly) NSString *apiVersion;
-
-@property (weak, nonatomic) id<HYBaseRequestManagerService> service;
-
-+ (instancetype)sharedInstance;
-
-/**
- *  @author hyyy, 16-08-30 17:08:40
- *
- *  @brief 初始化GET请求
- *
- *  @param requestParams params
- *  @param methodName    method name
- *
- *  @return NSURLRequest
- */
-- (NSURLRequest *)GETRequestWithRequestParams:(NSDictionary *)requestParams
-                                   methodName:(NSString *)methodName;
 
 @end

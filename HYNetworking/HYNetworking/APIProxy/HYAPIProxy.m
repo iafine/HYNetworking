@@ -8,7 +8,7 @@
 
 #import "HYAPIProxy.h"
 #import <AFNetworking/AFNetworking.h>
-#import "HYBaseRequestManager.h"
+#import "HYRequestManager.h"
 
 @interface HYAPIProxy()
 
@@ -33,7 +33,7 @@
 
 - (NSInteger)getWithPamrams:(NSDictionary *)params methodName:(NSString *)methodName success:(HYCallBack)success fail:(HYCallBack)fail {
     
-    NSURLRequest *request = [[HYBaseRequestManager sharedInstance] GETRequestWithRequestParams:params methodName:methodName];
+    NSURLRequest *request = [[HYRequestManager sharedInstance] GETRequestWithRequestParams:params methodName:methodName];
     
     NSNumber *requestID = [self startRequestWithRequest:request success:success fail:fail];
     return [requestID integerValue];
@@ -56,17 +56,17 @@
         NSNumber *requestID = @([dataTask taskIdentifier]);
         [self.requestList removeObjectForKey:requestID];
         
-        NSData *responseData = responseObject;
         if (error) {
             NSLog(@"error");
-            HYResponseManager *response = [[HYResponseManager alloc] initWithRequest:request requestID:requestID responseData:responseData error:error];
-            fail ? fail(response) : nil;
+            HYResponseManager *HYResponse = [[HYResponseManager alloc] initWithResponse:response responseData:responseObject requestID:requestID request:request error:error];
+            fail ? fail(HYResponse) : nil;
         }else {
             NSLog(@"success");
-            HYResponseManager *response = [[HYResponseManager alloc] initWithRequest:request requestID:requestID responseData:responseData error:nil];
-            success ? success(response) : nil;
+            HYResponseManager *HYResponse = [[HYResponseManager alloc] initWithResponse:response responseData:responseObject requestID:requestID request:request error:error];
+            success ? success(HYResponse) : nil;
         }
     }];
+    
     NSNumber *requestID = @([dataTask taskIdentifier]);
     
     [self.requestList setObject:dataTask forKey:requestID];

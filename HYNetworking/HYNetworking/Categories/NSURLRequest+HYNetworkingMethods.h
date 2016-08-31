@@ -13,7 +13,7 @@
 /**
  *  @author hyyy, 16-08-30 17:08:26
  *
- *  @brief add request params property
+ *  @brief 增加一个requestParams属性
  */
 @property (copy, nonatomic) NSDictionary *hy_requestParams;
 

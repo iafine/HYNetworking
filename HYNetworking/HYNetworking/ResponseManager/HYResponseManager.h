@@ -26,20 +26,22 @@ typedef NS_ENUM(NSUInteger, HYNetworkResponseStatus) {
 @property (copy, nonatomic, readonly) NSError *responseError;
 
 /**
- *  @author hyyy, 16-08-30 17:08:52
+ *  @author hyyy, 16-08-31 15:08:05
  *
- *  @brief 初始化http响应
+ *  @brief 初始化请求响应
  *
- *  @param request      request
- *  @param requestID    request id
- *  @param responseData response data
- *  @param error        error
+ *  @param response
+ *  @param responseData
+ *  @param requestID
+ *  @param request
+ *  @param error
  *
- *  @return custom response
+ *  @return
  */
-- (instancetype)initWithRequest:(NSURLRequest *)request
-                      requestID:(NSNumber *)requestID
-                   responseData:(NSData *)responseData
-                          error:(NSError *)error;
+- (instancetype)initWithResponse:(NSURLResponse *)response
+                    responseData:(NSData *)responseData
+                       requestID:(NSNumber *)requestID
+                         request:(NSURLRequest *)request
+                           error:(NSError *)error;
 
 @end

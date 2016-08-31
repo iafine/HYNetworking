@@ -20,10 +20,10 @@ typedef void(^HYCallBack)(HYResponseManager *response);
  *
  *  @brief GET请求方法
  *
- *  @param params     params
- *  @param methodName method name
- *  @param success    success callbak
- *  @param fail       fail callback
+ *  @param params
+ *  @param methodName
+ *  @param success
+ *  @param fail        
  *
  *  @return requestID
  */

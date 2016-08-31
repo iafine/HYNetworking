@@ -8,6 +8,7 @@
 
 #import "HYResponseManager.h"
 #import "NSURLRequest+HYNetworkingMethods.h"
+#import "HYLogger.h"
 
 @interface HYResponseManager()
 
@@ -24,7 +25,7 @@
 @implementation HYResponseManager
 
 #pragma mark - life cycle
-- (instancetype)initWithRequest:(NSURLRequest *)request requestID:(NSNumber *)requestID responseData:(NSData *)responseData error:(NSError *)error {
+- (instancetype)initWithResponse:(NSURLResponse *)response responseData:(NSData *)responseData requestID:(NSNumber *)requestID request:(NSURLRequest *)request error:(NSError *)error {
     self = [super init];
     if (self) {
         self.request = request;
@@ -40,6 +41,9 @@
             self.content = nil;
             self.contentStr = nil;
         }
+        
+        // 打印日志
+        [HYLogger printDebugLogWithResponse:response content:self.content request:request error:error];
     }
     return self;
 }

@@ -7,28 +7,38 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HYBaseRequestManager.h"
-#import "HYResponseManager.h"
+#import "HYRequestService.h"
 
 @interface HYLogger : NSObject
 
-+ (instancetype)sharedInstance;
-
 /**
- *  @author hyyy, 16-08-30 17:08:09
+ *  @author hyyy, 16-08-31 14:08:30
  *
- *  @brief 打印请求日志 (debug)
+ *  @brief  打印请求网络日志 (Debug)
  *
- *  @param request        request
- *  @param requestUrl     url
- *  @param requestManager request manager
- *  @param methodName     method name
+ *  @param request
+ *  @param service
+ *  @param url
+ *  @param methodName
  */
-- (void)printDebugLogWithRequest:(NSURLRequest *)request
-                      requestUrl:(NSString *)requestUrl
-                  requestManager:(HYBaseRequestManager *)requestManager
++ (void)printDebugLogWithRequest:(NSURLRequest *)request
+                  requestService:(HYRequestService *)service
+                      requestUrl:(NSString *)url
                       methodName:(NSString *)methodName;
 
-- (void)printDebugLogWithResponse:(NSHTTPURLResponse *)response responseString:(NSString *)responseString request:(NSURLRequest *)request error:(NSError *)error;
+/**
+ *  @author hyyy, 16-08-31 14:08:54
+ *
+ *  @brief 打印响应网络日志 (Debug)
+ *
+ *  @param response
+ *  @param content
+ *  @param request
+ *  @param error
+ */
++ (void)printDebugLogWithResponse:(NSURLResponse *)response
+                          content:(NSString *)content
+                          request:(NSURLRequest *)request
+                            error:(NSError *)error;
 
 @end

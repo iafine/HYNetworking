@@ -22,6 +22,10 @@
 // 运行环境相关
 @property (assign, nonatomic, readonly) BOOL isReachable;
 @property (assign, nonatomic, readonly) BOOL isOnline;
+@property (copy, nonatomic, readonly) NSString *offlineApiBaseUrl;
+@property (copy, nonatomic, readonly) NSString *onlineApiBaseUrl;
+@property (copy, nonatomic, readonly) NSString *offlineApiVersion;
+@property (copy, nonatomic, readonly) NSString *onlineApiVersion;
 
 // 用户信息
 @property (copy, nonatomic, readonly) NSString *accessToken;

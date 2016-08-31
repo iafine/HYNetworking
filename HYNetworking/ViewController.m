@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "HYAPIProxy.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [[HYAPIProxy sharedInstance] getWithPamrams:nil methodName:@"news/latest" success:^(HYResponseManager *response) {
+    } fail:^(HYResponseManager *response) {
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
