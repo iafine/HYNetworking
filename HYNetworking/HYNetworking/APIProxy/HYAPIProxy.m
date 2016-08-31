@@ -2,8 +2,8 @@
 //  HYAPIProxy.m
 //  HYNetworking
 //
-//  Created by work on 16/8/25.
-//  Copyright © 2016年 hyyy. All rights reserved.
+//  Created by work on 15/8/25.
+//  Copyright © 2015年 hyyy. All rights reserved.
 //
 
 #import "HYAPIProxy.h"
@@ -31,24 +31,32 @@
     return sharedInstance;
 }
 
-- (NSInteger)getWithPamrams:(NSDictionary *)params methodName:(NSString *)methodName success:(HYCallBack)success fail:(HYCallBack)fail {
-    
+- (NSInteger)GETWithPamrams:(NSDictionary *)params methodName:(NSString *)methodName success:(HYCallBack)success fail:(HYCallBack)fail {
     NSURLRequest *request = [[HYRequestManager sharedInstance] GETRequestWithRequestParams:params methodName:methodName];
-    
+    NSNumber *requestID = [self startRequestWithRequest:request success:success fail:fail];
+    return [requestID integerValue];
+}
+
+- (NSInteger)POSTWithPamrams:(NSDictionary *)params methodName:(NSString *)methodName success:(HYCallBack)success fail:(HYCallBack)fail {
+    NSURLRequest *request = [[HYRequestManager sharedInstance] POSTRequestWithRequestParams:params methodName:methodName];
+    NSNumber *requestID = [self startRequestWithRequest:request success:success fail:fail];
+    return [requestID integerValue];
+}
+
+- (NSInteger)PUTWithPamrams:(NSDictionary *)params methodName:(NSString *)methodName success:(HYCallBack)success fail:(HYCallBack)fail {
+    NSURLRequest *request = [[HYRequestManager sharedInstance] PUTRequestWithRequestParams:params methodName:methodName];
+    NSNumber *requestID = [self startRequestWithRequest:request success:success fail:fail];
+    return [requestID integerValue];
+}
+
+- (NSInteger)DELETEWithPamrams:(NSDictionary *)params methodName:(NSString *)methodName success:(HYCallBack)success fail:(HYCallBack)fail {
+    NSURLRequest *request = [[HYRequestManager sharedInstance] DELETERequestWithRequestParams:params methodName:methodName];
     NSNumber *requestID = [self startRequestWithRequest:request success:success fail:fail];
     return [requestID integerValue];
 }
 
 /**
- *  @author hyyy, 16-08-25 15:08:13
- *
- *  @brief 将使用到AFNetworking的东西进行归总，如果以后需要更改底层网络框架，那么直接在此方法里修改即可。
- *
- *  @param request request
- *  @param success success callback
- *  @param fail    fail callback
- *
- *  @return requestID
+ *  将使用到AFNetworking的东西进行归总，如果以后需要更改底层网络框架，那么直接在此方法里修改即可。
  */
 - (NSNumber *)startRequestWithRequest:(NSURLRequest *)request success:(HYCallBack)success fail:(HYCallBack)fail {
     NSURLSessionDataTask *dataTask = nil;

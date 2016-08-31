@@ -2,8 +2,8 @@
 //  HYRequestServiceFactory.h
 //  HYNetworking
 //
-//  Created by work on 16/8/31.
-//  Copyright © 2016年 hyyy. All rights reserved.
+//  Created by work on 15/8/31.
+//  Copyright © 2015年 hyyy. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -14,11 +14,7 @@
 + (instancetype)sharedInstance;
 
 /**
- *  @author hyyy, 16-08-31 09:08:03
- *
- *  @brief 生成请求服务类
- *
- *  @return 请求服务类
+ *  生成请求服务类
  */
 - (HYRequestService<HYRequestServiceProtocol> *)generatorRequestService;
 

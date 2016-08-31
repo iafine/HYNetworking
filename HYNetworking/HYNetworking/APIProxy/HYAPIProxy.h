@@ -2,8 +2,8 @@
 //  HYAPIProxy.h
 //  HYNetworking
 //
-//  Created by work on 16/8/25.
-//  Copyright © 2016年 hyyy. All rights reserved.
+//  Created by work on 15/8/25.
+//  Copyright © 2015年 hyyy. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -16,18 +16,33 @@ typedef void(^HYCallBack)(HYResponseManager *response);
 + (instancetype)sharedInstance;
 
 /**
- *  @author hyyy, 16-08-25 15:08:38
- *
- *  @brief GET请求方法
- *
- *  @param params
- *  @param methodName
- *  @param success
- *  @param fail        
- *
- *  @return requestID
+ *  GET请求方法
  */
-- (NSInteger)getWithPamrams:(NSDictionary *)params
+- (NSInteger)GETWithPamrams:(NSDictionary *)params
+                 methodName:(NSString *)methodName
+                    success:(HYCallBack)success
+                       fail:(HYCallBack)fail;
+
+/**
+ *  POST请求方法
+ */
+- (NSInteger)POSTWithPamrams:(NSDictionary *)params
+                 methodName:(NSString *)methodName
+                    success:(HYCallBack)success
+                       fail:(HYCallBack)fail;
+
+/**
+ *  PUT请求方法
+ */
+- (NSInteger)PUTWithPamrams:(NSDictionary *)params
+                 methodName:(NSString *)methodName
+                    success:(HYCallBack)success
+                       fail:(HYCallBack)fail;
+
+/**
+ *  DELETE请求方法
+ */
+- (NSInteger)DELETEWithPamrams:(NSDictionary *)params
                  methodName:(NSString *)methodName
                     success:(HYCallBack)success
                        fail:(HYCallBack)fail;

@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[HYAPIProxy sharedInstance] getWithPamrams:nil methodName:@"news/latest" success:^(HYResponseManager *response) {
+    [[HYAPIProxy sharedInstance] GETWithPamrams:nil methodName:@"news/latest" success:^(HYResponseManager *response) {
     } fail:^(HYResponseManager *response) {
     }];
 }

@@ -2,8 +2,8 @@
 //  HYResponseManager.h
 //  HYNetworking
 //
-//  Created by work on 16/8/30.
-//  Copyright © 2016年 hyyy. All rights reserved.
+//  Created by work on 15/8/30.
+//  Copyright © 2015年 hyyy. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -26,17 +26,7 @@ typedef NS_ENUM(NSUInteger, HYNetworkResponseStatus) {
 @property (copy, nonatomic, readonly) NSError *responseError;
 
 /**
- *  @author hyyy, 16-08-31 15:08:05
- *
- *  @brief 初始化请求响应
- *
- *  @param response
- *  @param responseData
- *  @param requestID
- *  @param request
- *  @param error
- *
- *  @return
+ *  初始化请求响应
  */
 - (instancetype)initWithResponse:(NSURLResponse *)response
                     responseData:(NSData *)responseData

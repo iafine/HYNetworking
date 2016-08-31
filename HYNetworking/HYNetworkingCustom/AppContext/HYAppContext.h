@@ -2,8 +2,8 @@
 //  HYAppContext.h
 //  HYNetworking
 //
-//  Created by work on 16/8/26.
-//  Copyright © 2016年 hyyy. All rights reserved.
+//  Created by work on 15/8/26.
+//  Copyright © 2015年 hyyy. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
