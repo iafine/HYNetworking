@@ -8,8 +8,11 @@
 
 #import "ViewController.h"
 #import "HYAPIProxy.h"
+#import "HYTestAPIManager.h"
 
-@interface ViewController ()
+@interface ViewController ()<HYAPIManagerParamSource, HYAPIManagerCallBackDelegate, HYAPIManagerValidator>
+
+@property (strong, nonatomic) HYTestAPIManager *testManager;
 
 @end
 
@@ -18,14 +21,54 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[HYAPIProxy sharedInstance] GETWithPamrams:nil methodName:@"news/latest" success:^(HYResponseManager *response) {
-    } fail:^(HYResponseManager *response) {
-    }];
+    [self.testManager loadData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - HYAPIManagerParamSource
+- (NSDictionary *)paramsWithManager:(HYBaseAPIManager *)manager {
+    if (manager == self.testManager) {
+        return @{@"userid":@"12"
+                 };
+    }
+    return @{
+             };
+}
+
+#pragma mark - HYAPIManagerCallBackDelegate
+- (void)callBackAPIDidSuccess:(HYBaseAPIManager *)manager {
+    if (manager == self.testManager) {
+        NSDictionary *dic = (NSDictionary *)manager.response.content;
+        NSLog(@"%@", dic);
+    }
+}
+
+- (void)callBackAPIDidFailed:(HYBaseAPIManager *)manager {
+    NSLog(@"请求失败");
+}
+
+#pragma mark - HYAPIManagerValidator
+- (BOOL)manager:(HYBaseAPIManager *)manager isCorrectWithParamsData:(NSDictionary *)params {
+    return YES;
+}
+
+- (BOOL)manager:(HYBaseAPIManager *)manager isCorrectWithResponseContentData:(id)content {
+    return YES;
+}
+
+#pragma mark - setter and getter
+- (HYTestAPIManager *)testManager {
+    if (!_testManager) {
+        _testManager = [[HYTestAPIManager alloc] init];
+        _testManager.delegate = self;
+        _testManager.paramsSource = self;
+        _testManager.validator = self;
+    }
+    return _testManager;
 }
 
 @end
