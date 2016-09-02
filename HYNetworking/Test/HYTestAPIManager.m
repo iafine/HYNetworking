@@ -19,4 +19,13 @@
     return HYAPIManagerRequestTypeGet;
 }
 
+#pragma mark - HYAPIManagerValidator
+- (BOOL)manager:(HYAPIManager *)manager isCorrectWithResponseContentData:(id)content {
+    return YES;
+}
+
+- (BOOL)manager:(HYAPIManager *)manager isCorrectWithParamsData:(NSDictionary *)params {
+    return YES;
+}
+
 @end

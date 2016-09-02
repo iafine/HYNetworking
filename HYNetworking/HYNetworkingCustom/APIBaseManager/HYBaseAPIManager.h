@@ -1,13 +1,13 @@
 //
-//  HYTestAPIManager.h
+//  HYBaseAPIManager.h
 //  HYNetworking
 //
 //  Created by work on 16/9/1.
 //  Copyright © 2016年 hyyy. All rights reserved.
 //
 
-#import "HYBaseAPIManager.h"
+#import "HYAPIManager.h"
 
-@interface HYTestAPIManager : HYBaseAPIManager
+@interface HYBaseAPIManager : HYAPIManager
 
 @end

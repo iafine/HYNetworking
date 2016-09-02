@@ -15,6 +15,8 @@
 		9609A73C1D6EBD2500F11E76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9609A73B1D6EBD2500F11E76 /* Assets.xcassets */; };
 		9609A73F1D6EBD2500F11E76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9609A73D1D6EBD2500F11E76 /* LaunchScreen.storyboard */; };
 		9609A74A1D6EC4F300F11E76 /* HYAPIProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9609A7491D6EC4F300F11E76 /* HYAPIProxy.m */; };
+		966606731D7967B100FACD49 /* HYAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 966606721D7967B100FACD49 /* HYAPIManager.m */; };
+		96A20C611D797BED00D962B2 /* HYBaseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A20C601D797BED00D962B2 /* HYBaseAPIManager.m */; };
 		96C43A211D740E73002A7373 /* HYAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A201D740E73002A7373 /* HYAppContext.m */; };
 		96C43A251D7437C5002A7373 /* HYCommonParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A241D7437C5002A7373 /* HYCommonParams.m */; };
 		96C43A291D752963002A7373 /* HYResponseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A281D752963002A7373 /* HYResponseManager.m */; };
@@ -25,7 +27,6 @@
 		96C43A3B1D766EDD002A7373 /* HYRequestServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A3A1D766EDD002A7373 /* HYRequestServiceFactory.m */; };
 		96C43A3F1D7671F6002A7373 /* HYCustomRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A3E1D7671F6002A7373 /* HYCustomRequestService.m */; };
 		96C43A421D7682D9002A7373 /* NSObject+HYNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A411D7682D9002A7373 /* NSObject+HYNetworkingMethods.m */; };
-		96C43A461D77F789002A7373 /* HYBaseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A451D77F789002A7373 /* HYBaseAPIManager.m */; };
 		96C43A4A1D783F60002A7373 /* HYTestAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A491D783F60002A7373 /* HYTestAPIManager.m */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,10 @@
 		9609A7401D6EBD2500F11E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9609A7481D6EC4F300F11E76 /* HYAPIProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYAPIProxy.h; path = HYNetworking/APIProxy/HYAPIProxy.h; sourceTree = "<group>"; };
 		9609A7491D6EC4F300F11E76 /* HYAPIProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HYAPIProxy.m; path = HYNetworking/APIProxy/HYAPIProxy.m; sourceTree = "<group>"; };
+		966606711D7967B100FACD49 /* HYAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYAPIManager.h; path = HYNetworking/APIManager/HYAPIManager.h; sourceTree = "<group>"; };
+		966606721D7967B100FACD49 /* HYAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HYAPIManager.m; path = HYNetworking/APIManager/HYAPIManager.m; sourceTree = "<group>"; };
+		96A20C5F1D797BED00D962B2 /* HYBaseAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBaseAPIManager.h; sourceTree = "<group>"; };
+		96A20C601D797BED00D962B2 /* HYBaseAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBaseAPIManager.m; sourceTree = "<group>"; };
 		96C43A1F1D740E73002A7373 /* HYAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAppContext.h; sourceTree = "<group>"; };
 		96C43A201D740E73002A7373 /* HYAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAppContext.m; sourceTree = "<group>"; };
 		96C43A231D7437C5002A7373 /* HYCommonParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYCommonParams.h; path = HYNetworking/CommonParams/HYCommonParams.h; sourceTree = "<group>"; };
@@ -64,8 +69,6 @@
 		96C43A3E1D7671F6002A7373 /* HYCustomRequestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HYCustomRequestService.m; path = HYNetworkingCustom/CustomRequestService/HYCustomRequestService.m; sourceTree = "<group>"; };
 		96C43A401D7682D9002A7373 /* NSObject+HYNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+HYNetworkingMethods.h"; path = "HYNetworking/Categories/NSObject+HYNetworkingMethods.h"; sourceTree = "<group>"; };
 		96C43A411D7682D9002A7373 /* NSObject+HYNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+HYNetworkingMethods.m"; path = "HYNetworking/Categories/NSObject+HYNetworkingMethods.m"; sourceTree = "<group>"; };
-		96C43A441D77F789002A7373 /* HYBaseAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYBaseAPIManager.h; path = HYNetworking/APIManager/HYBaseAPIManager.h; sourceTree = "<group>"; };
-		96C43A451D77F789002A7373 /* HYBaseAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HYBaseAPIManager.m; path = HYNetworking/APIManager/HYBaseAPIManager.m; sourceTree = "<group>"; };
 		96C43A481D783F60002A7373 /* HYTestAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYTestAPIManager.h; path = Test/HYTestAPIManager.h; sourceTree = "<group>"; };
 		96C43A491D783F60002A7373 /* HYTestAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HYTestAPIManager.m; path = Test/HYTestAPIManager.m; sourceTree = "<group>"; };
 		AD4E8F17EEE3E71E6454968F /* Pods-HYNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYNetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HYNetworking/Pods-HYNetworking.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,9 +124,9 @@
 		9609A72E1D6EBD2400F11E76 /* HYNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				96C43A471D783F41002A7373 /* Test */,
 				9609A7461D6EBF0100F11E76 /* HYNetworking */,
 				96C43A191D740C69002A7373 /* HYNetworkingCustom */,
+				96C43A471D783F41002A7373 /* Test */,
 				9609A7321D6EBD2500F11E76 /* AppDelegate.h */,
 				9609A7331D6EBD2500F11E76 /* AppDelegate.m */,
 				9609A7351D6EBD2500F11E76 /* ViewController.h */,
@@ -168,6 +171,16 @@
 			name = APIProxy;
 			sourceTree = "<group>";
 		};
+		96A20C5E1D797BED00D962B2 /* APIBaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				96A20C5F1D797BED00D962B2 /* HYBaseAPIManager.h */,
+				96A20C601D797BED00D962B2 /* HYBaseAPIManager.m */,
+			);
+			name = APIBaseManager;
+			path = HYNetworkingCustom/APIBaseManager;
+			sourceTree = "<group>";
+		};
 		96C43A121D7400A6002A7373 /* RequestManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +194,7 @@
 		96C43A191D740C69002A7373 /* HYNetworkingCustom */ = {
 			isa = PBXGroup;
 			children = (
+				96A20C5E1D797BED00D962B2 /* APIBaseManager */,
 				96C43A3C1D7671CF002A7373 /* CustomRequestService */,
 				96C43A1E1D740E73002A7373 /* AppContext */,
 			);
@@ -258,8 +272,8 @@
 		96C43A431D77F73E002A7373 /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
-				96C43A441D77F789002A7373 /* HYBaseAPIManager.h */,
-				96C43A451D77F789002A7373 /* HYBaseAPIManager.m */,
+				966606711D7967B100FACD49 /* HYAPIManager.h */,
+				966606721D7967B100FACD49 /* HYAPIManager.m */,
 			);
 			name = APIManager;
 			sourceTree = "<group>";
@@ -397,14 +411,15 @@
 				96C43A211D740E73002A7373 /* HYAppContext.m in Sources */,
 				96C43A3B1D766EDD002A7373 /* HYRequestServiceFactory.m in Sources */,
 				9609A74A1D6EC4F300F11E76 /* HYAPIProxy.m in Sources */,
+				966606731D7967B100FACD49 /* HYAPIManager.m in Sources */,
 				96C43A4A1D783F60002A7373 /* HYTestAPIManager.m in Sources */,
-				96C43A461D77F789002A7373 /* HYBaseAPIManager.m in Sources */,
 				96C43A311D758550002A7373 /* HYLogger.m in Sources */,
 				96C43A341D766CAC002A7373 /* HYRequestManager.m in Sources */,
 				96C43A291D752963002A7373 /* HYResponseManager.m in Sources */,
 				96C43A3F1D7671F6002A7373 /* HYCustomRequestService.m in Sources */,
 				96C43A251D7437C5002A7373 /* HYCommonParams.m in Sources */,
 				96C43A381D766D5B002A7373 /* HYRequestService.m in Sources */,
+				96A20C611D797BED00D962B2 /* HYBaseAPIManager.m in Sources */,
 				9609A7371D6EBD2500F11E76 /* ViewController.m in Sources */,
 				96C43A2D1D7530E0002A7373 /* NSURLRequest+HYNetworkingMethods.m in Sources */,
 				9609A7341D6EBD2500F11E76 /* AppDelegate.m in Sources */,

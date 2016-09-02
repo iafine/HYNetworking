@@ -51,22 +51,12 @@
     NSLog(@"请求失败");
 }
 
-#pragma mark - HYAPIManagerValidator
-- (BOOL)manager:(HYBaseAPIManager *)manager isCorrectWithParamsData:(NSDictionary *)params {
-    return YES;
-}
-
-- (BOOL)manager:(HYBaseAPIManager *)manager isCorrectWithResponseContentData:(id)content {
-    return YES;
-}
-
 #pragma mark - setter and getter
 - (HYTestAPIManager *)testManager {
     if (!_testManager) {
         _testManager = [[HYTestAPIManager alloc] init];
         _testManager.delegate = self;
         _testManager.paramsSource = self;
-        _testManager.validator = self;
     }
     return _testManager;
 }

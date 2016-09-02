@@ -48,7 +48,10 @@
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
     NSMutableString *logString = [NSMutableString stringWithString:@"\n\n==============================================================\n=                        API Response                        =\n==============================================================\n\n"];
     
-    [logString appendFormat:@"Status:\t%ld\t(%@)\n\n", (long)httpResponse.statusCode, [NSHTTPURLResponse localizedStringForStatusCode:httpResponse.statusCode]];
+    [logString appendFormat:@"Status:\t%ld\t(%@)\n", (long)httpResponse.statusCode, [NSHTTPURLResponse localizedStringForStatusCode:httpResponse.statusCode]];
+    
+    [logString appendFormat:@"HTTP Header:\n%@\n", httpResponse.allHeaderFields ? httpResponse.allHeaderFields : @"\t\t\t\t\tN/A"];
+    
     [logString appendFormat:@"Content:\n\t%@\n\n", content];
     if (shouldLogError) {
         [logString appendFormat:@"Error Domain:\t\t\t\t\t\t\t%@\n", error.domain];
