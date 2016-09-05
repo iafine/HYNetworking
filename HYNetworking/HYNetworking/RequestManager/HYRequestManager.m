@@ -13,6 +13,7 @@
 #import "AFURLRequestSerialization.h"
 #import "NSURLRequest+HYNetworkingMethods.h"
 #import "HYLogger.h"
+#import "HYNetworkContext.h"
 
 @interface HYRequestManager()
 
@@ -142,7 +143,7 @@
 - (AFHTTPRequestSerializer *)httpRequestSerializer {
     if (_httpRequestSerializer == nil) {
         _httpRequestSerializer = [AFHTTPRequestSerializer serializer];
-        _httpRequestSerializer.timeoutInterval = 60;    // 这个值要改成可配置的
+        _httpRequestSerializer.timeoutInterval = [[[HYNetworkContext sharedInstance] timeoutInterval] doubleValue];
         _httpRequestSerializer.cachePolicy = NSURLRequestUseProtocolCachePolicy;
     }
     return _httpRequestSerializer;

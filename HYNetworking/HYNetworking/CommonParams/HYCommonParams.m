@@ -7,27 +7,24 @@
 //
 
 #import "HYCommonParams.h"
+#import "HYNetworkContext.h"
 
 @implementation HYCommonParams
 
 + (NSDictionary *)generatorGETRequestCommonParams {
-    return @{
-             };
+    return [[HYNetworkContext sharedInstance] GETCommonParams];
 }
 
 + (NSDictionary *)generatorPOSTRequestCommonParams {
-    return @{
-             };
+    return [[HYNetworkContext sharedInstance] POSTCommonParams];
 }
 
 + (NSDictionary *)generatorPUTRequestCommonParams {
-    return @{
-             };
+    return [[HYNetworkContext sharedInstance] PUTCommonParams];
 }
 
 + (NSDictionary *)generatorDELETERequestCommonParams {
-    return @{
-             };
+    return [[HYNetworkContext sharedInstance] DELETECommonParams];
 }
 
 @end

@@ -47,4 +47,14 @@ typedef void(^HYCallBack)(HYResponseManager *response);
                     success:(HYCallBack)success
                        fail:(HYCallBack)fail;
 
+/**
+ *  根据requestID取消请求
+ */
+- (void)cancelRequestWithRequestID:(NSNumber *)requestID;
+
+/**
+ *  取消全部请求
+ */
+- (void)cancelRequestWithRequestIDList:(NSArray *)requestIDList;
+
 @end

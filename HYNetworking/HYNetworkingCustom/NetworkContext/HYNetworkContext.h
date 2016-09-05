@@ -1,14 +1,14 @@
 //
-//  HYAppContext.h
+//  HYNetworkContext.h
 //  HYNetworking
 //
-//  Created by work on 15/8/26.
-//  Copyright © 2015年 hyyy. All rights reserved.
+//  Created by work on 16/9/5.
+//  Copyright © 2016年 hyyy. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface HYAppContext : NSObject
+@interface HYNetworkContext : NSObject
 
 // 设备信息
 @property (copy, nonatomic, readonly) NSString *deviceName;
@@ -26,17 +26,13 @@
 @property (copy, nonatomic, readonly) NSString *onlineApiBaseUrl;
 @property (copy, nonatomic, readonly) NSString *offlineApiVersion;
 @property (copy, nonatomic, readonly) NSString *onlineApiVersion;
+@property (copy, nonatomic, readonly) NSString *timeoutInterval;
 
-// 用户信息
-@property (copy, nonatomic, readonly) NSString *accessToken;
-@property (copy, nonatomic, readonly) NSDictionary *userInfo;
-@property (copy, nonatomic, readonly) NSString *userID;
-@property (assign, nonatomic, readonly) BOOL idLoggedIn;
-
-// app信息
-@property (copy, nonatomic, readonly) NSString *sessionID;  // app每次启动都会生成
-@property (copy, nonatomic, readonly) NSString *appVersion;
-
+// 公共入参配置
+@property (copy, nonatomic, readonly) NSDictionary *GETCommonParams;
+@property (copy, nonatomic, readonly) NSDictionary *POSTCommonParams;
+@property (copy, nonatomic, readonly) NSDictionary *PUTCommonParams;
+@property (copy, nonatomic, readonly) NSDictionary *DELETECommonParams;
 
 + (instancetype)sharedInstance;
 

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "HYResponseManager.h"
+#import "HYAPIManager.h"
 
 @class HYAPIManager;
 
@@ -98,6 +99,7 @@ typedef NS_ENUM(NSUInteger, HYAPIManagerErrorType) {
 @protocol HYAPIManagerCallBackDelegate <NSObject>
 
 @required
+
 /**
  *  请求成功之后的回调
  */
@@ -140,7 +142,20 @@ typedef NS_ENUM(NSUInteger, HYAPIManagerErrorType) {
 
 @property (strong, nonatomic) HYResponseManager *response;
 
+/**
+ *  请求方法，返回requestID
+ */
 - (NSInteger)loadData;
+
+/**
+ *  根据requestID取消请求
+ */
+- (void)cancelRequestWithRequestID:(NSInteger)requestID;
+
+/**
+ *  取消全部请求
+ */
+- (void)cancelAllRequests;
 
 @end
 

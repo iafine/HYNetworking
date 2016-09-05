@@ -7,28 +7,28 @@
 //
 
 #import "HYCustomRequestService.h"
-#import "HYAppContext.h"
+#import "HYNetworkContext.h"
 
 @implementation HYCustomRequestService
 
 - (BOOL)isOnline {
-    return [[HYAppContext sharedInstance] isOnline];
+    return [[HYNetworkContext sharedInstance] isOnline];
 }
 
 - (NSString *)offlineApiBaseUrl {
-    return [[HYAppContext sharedInstance] offlineApiBaseUrl];
+    return [[HYNetworkContext sharedInstance] offlineApiBaseUrl];
 }
 
 - (NSString *)onlineApiBaseUrl {
-    return [[HYAppContext sharedInstance] onlineApiBaseUrl];
+    return [[HYNetworkContext sharedInstance] onlineApiBaseUrl];
 }
 
 - (NSString *)offlineApiVersion {
-    return [[HYAppContext sharedInstance] offlineApiVersion];
+    return [[HYNetworkContext sharedInstance] offlineApiVersion];
 }
 
 - (NSString *)onlineApiVersion {
-    return [[HYAppContext sharedInstance] onlineApiVersion];
+    return [[HYNetworkContext sharedInstance] onlineApiVersion];
 }
 
 @end

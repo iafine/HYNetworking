@@ -1,27 +1,28 @@
 //
-//  HYAppContext.m
+//  HYNetworkContext.m
 //  HYNetworking
 //
-//  Created by work on 15/8/26.
-//  Copyright © 2015年 hyyy. All rights reserved.
+//  Created by work on 16/9/5.
+//  Copyright © 2016年 hyyy. All rights reserved.
 //
 
-#import "HYAppContext.h"
+#import "HYNetworkContext.h"
 #import "AFNetworkReachabilityManager.h"
 
-@implementation HYAppContext
+@implementation HYNetworkContext
 
 #pragma mark - life cycle
 + (instancetype)sharedInstance {
     static dispatch_once_t onceToken;
-    static HYAppContext *sharedInstance;
+    static HYNetworkContext *sharedInstance;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[HYAppContext alloc] init];
+        sharedInstance = [[HYNetworkContext alloc] init];
     });
     return sharedInstance;
 }
 
 #pragma mark - setter and getter
+/*********************************运行环境相关*********************************************/
 - (BOOL)isReachable {
     if ([AFNetworkReachabilityManager sharedManager].networkReachabilityStatus == AFNetworkReachabilityStatusUnknown) {
         return YES;
@@ -31,25 +32,96 @@
 }
 
 - (BOOL)isOnline {
-    return YES;
+    BOOL isOnline = NO;
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"HYNetworkConfiguration" ofType:@"plist"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filepath]) {
+        NSDictionary *settings = [[NSDictionary alloc] initWithContentsOfFile:filepath];
+        isOnline = [settings[@"isOnline"] boolValue];
+    }
+    return isOnline;
 }
 
 - (NSString *)offlineApiBaseUrl {
-    return @"http://news-at.zhihu.com/api";
+    NSString *offlineApiBaseUrl;
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"HYNetworkConfiguration" ofType:@"plist"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filepath]) {
+        NSDictionary *settings = [[NSDictionary alloc] initWithContentsOfFile:filepath];
+        offlineApiBaseUrl = [settings objectForKey:@"offlineApiBaseUrl"];
+    }else {
+        offlineApiBaseUrl = @"";
+    }
+    return offlineApiBaseUrl;
 }
 
 - (NSString *)onlineApiBaseUrl {
-    return @"http://news-at.zhihu.com/api";
+    NSString *onlineApiBaseUrl;
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"HYNetworkConfiguration" ofType:@"plist"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filepath]) {
+        NSDictionary *settings = [[NSDictionary alloc] initWithContentsOfFile:filepath];
+        onlineApiBaseUrl = [settings objectForKey:@"onlineApiBaseUrl"];
+    }else {
+        onlineApiBaseUrl = @"";
+    }
+    return onlineApiBaseUrl;
 }
 
 - (NSString *)offlineApiVersion {
-    return @"4";
+    NSString *offlineApiVersion;
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"HYNetworkConfiguration" ofType:@"plist"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filepath]) {
+        NSDictionary *settings = [[NSDictionary alloc] initWithContentsOfFile:filepath];
+        offlineApiVersion = [settings objectForKey:@"offlineApiVersion"];
+    }else {
+        offlineApiVersion = @"";
+    }
+    return offlineApiVersion;
 }
 
 - (NSString *)onlineApiVersion {
-    return @"4";
+    NSString *onlineApiVersion;
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"HYNetworkConfiguration" ofType:@"plist"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filepath]) {
+        NSDictionary *settings = [[NSDictionary alloc] initWithContentsOfFile:filepath];
+        onlineApiVersion = [settings objectForKey:@"onlineApiVersion"];
+    }else {
+        onlineApiVersion = @"";
+    }
+    return onlineApiVersion;
 }
 
+- (NSString *)timeoutInterval {
+    NSString *timeoutInterval;
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"HYNetworkConfiguration" ofType:@"plist"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filepath]) {
+        NSDictionary *settings = [[NSDictionary alloc] initWithContentsOfFile:filepath];
+        timeoutInterval = [settings objectForKey:@"timeoutInterval"];
+    }else {
+        timeoutInterval = @"";
+    }
+    return timeoutInterval;
+}
+/*********************************************公共入参*********************************************/
+- (NSDictionary *)GETCommonParams {
+    return @{
+             };
+}
+
+- (NSDictionary *)POSTCommonParams {
+    return @{
+             };
+}
+
+- (NSDictionary *)PUTCommonParams {
+    return @{
+             };
+}
+
+- (NSDictionary *)DELETECommonParams {
+    return @{
+             };
+}
+
+/*********************************************设备信息*********************************************/
 - (NSString *)deviceName {
     return [[UIDevice currentDevice] name];
 }

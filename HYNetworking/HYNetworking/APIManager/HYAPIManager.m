@@ -7,7 +7,7 @@
 //
 
 #import "HYAPIManager.h"
-#import "HYAppContext.h"
+#import "HYNetworkContext.h"
 #import "HYAPIProxy.h"
 #import "HYResponseManager.h"
 
@@ -44,11 +44,26 @@
     return self;
 }
 
+- (void)dealloc {
+    [self cancelAllRequests];
+    self.requestIDArr = nil;
+}
+
 #pragma mark - public methods
 - (NSInteger)loadData {
     NSDictionary *params = [self.paramsSource paramsWithManager:self];
     NSInteger requestID = [self loadDataWithParams:params];
     return requestID;
+}
+
+- (void)cancelRequestWithRequestID:(NSInteger)requestID {
+    [self removeRequestIDWithRequestID:requestID];
+    [[HYAPIProxy sharedInstance] cancelRequestWithRequestID:@(requestID)];
+}
+
+- (void)cancelAllRequests {
+    [[HYAPIProxy sharedInstance] cancelRequestWithRequestIDList:self.requestIDArr];
+    [self.requestIDArr removeAllObjects];
 }
 
 #pragma mark - private methods
@@ -237,7 +252,7 @@
 
 #pragma mark - setter and getter
 - (BOOL)isReachable {
-    BOOL isReachability = [[HYAppContext sharedInstance] isReachable];
+    BOOL isReachability = [[HYNetworkContext sharedInstance] isReachable];
     if (!isReachability) {
         self.errorType = HYAPIManagerErrorTypeNoNetWork;
     }

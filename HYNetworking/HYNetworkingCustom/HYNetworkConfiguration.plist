@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>timeoutInterval</key>
+	<string>20</string>
+	<key>isOnline</key>
+	<true/>
+	<key>offlineApiBaseUrl</key>
+	<string>http://news-at.zhihu.com/api</string>
+	<key>onlineApiBaseUrl</key>
+	<string>http://news-at.zhihu.com/api</string>
+	<key>offlineApiVersion</key>
+	<string>4</string>
+	<key>onlineApiVersion</key>
+	<string>4</string>
+</dict>
+</plist>

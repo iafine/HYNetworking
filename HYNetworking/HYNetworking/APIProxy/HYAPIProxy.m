@@ -31,6 +31,7 @@
     return sharedInstance;
 }
 
+#pragma mark - public methods
 - (NSInteger)GETWithPamrams:(NSDictionary *)params methodName:(NSString *)methodName success:(HYCallBack)success fail:(HYCallBack)fail {
     NSURLRequest *request = [[HYRequestManager sharedInstance] GETRequestWithRequestParams:params methodName:methodName];
     NSNumber *requestID = [self startRequestWithRequest:request success:success fail:fail];
@@ -55,6 +56,19 @@
     return [requestID integerValue];
 }
 
+- (void)cancelRequestWithRequestID:(NSNumber *)requestID {
+    NSURLSessionDataTask *requestOperation = [self.requestList objectForKey:requestID];
+    [requestOperation cancel];
+    [self.requestList removeObjectForKey:requestID];
+}
+
+- (void)cancelRequestWithRequestIDList:(NSArray *)requestIDList {
+    for (NSNumber *requestID in requestIDList) {
+        [self cancelRequestWithRequestID:requestID];
+    }
+}
+
+#pragma mark - private methods
 /**
  *  将使用到AFNetworking的东西进行归总，如果以后需要更改底层网络框架，那么直接在此方法里修改即可。
  */
