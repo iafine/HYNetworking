@@ -32,6 +32,7 @@
 #pragma mark - HYAPIManagerParamSource
 - (NSDictionary *)paramsWithManager:(HYBaseAPIManager *)manager {
     if (manager == self.testManager) {
+        // 测试参数，传不传递对请求结果没有影响
         return @{@"userid":@"12"
                  };
     }

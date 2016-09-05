@@ -16,16 +16,23 @@
 }
 
 - (HYAPIManagerRequestType)requestType {
-    return HYAPIManagerRequestTypeGet;
+    return HYAPIManagerRequestTypeGet;  // 知乎日报接口为GET请求
 }
 
 #pragma mark - HYAPIManagerValidator
 - (BOOL)manager:(HYAPIManager *)manager isCorrectWithResponseContentData:(id)content {
-    return YES;
+    if (content) {
+        return YES;
+    }
+    return NO;
 }
 
 - (BOOL)manager:(HYAPIManager *)manager isCorrectWithParamsData:(NSDictionary *)params {
-    return YES;
+    NSString *userId = [params objectForKey:@"userid"];
+    if ([userId integerValue] == 12) {
+        return YES;
+    }
+    return NO;
 }
 
 @end
