@@ -1,11 +1,7 @@
 HYNetworking 
 ==========
-<!--
 ![License MIT](https://go-shields.herokuapp.com/license-MIT-blue.png)
-![Pod version](http://img.shields.io/cocoapods/v/YTKNetwork.svg?style=flat)
-![Platform info](http://img.shields.io/cocoapods/p/YTKNetwork.svg?style=flat)
-[![Build Status](https://api.travis-ci.org/yuantiku/YTKNetwork.svg?branch=master)](https://travis-ci.org/yuantiku/YTKNetwork)
--->
+
 ## 介绍
 HYNetworking是一个基于[AFNetworking][AFNetworking]的轻量级网络库。高度封装网络请求，使得业务实现更加清楚。
 
@@ -163,23 +159,6 @@ HYNetworking目前还有不完善的地方，未来希望增加一下功能：
 * 深度定制HTTP Header。
 * 等等。。。
 
-<!--## 协议
+## 协议
 
-YTKNetwork 被许可在 MIT 协议下使用。查阅 LICENSE 文件来获得更多信息。
-
-
-<!-- external links -->
-
-[BasicGuide-CN]: BasicGuide.md
-[ProGuide-CN]: ProGuide.md
-[BasicGuide-EN]: BasicGuide_en.md
-[YuanTiKu]:http://www.yuantiku.com
-[YuanSoTi]:http://www.yuansouti.com/
-[YuanFuDao]:http://www.yuanfudao.com
-[FenBiZhiBoKe]:http://ke.fenbi.com/
-[tangqiaoboyGithub]:https://github.com/tangqiaoboy
-[lancyGithub]:https://github.com/lancy
-[maojjGithub]:https://github.com/maojj
-[veecciGithub]:https://github.com/veecci
-[AFNetworking]:https://github.com/AFNetworking/AFNetworking
-[AFDownloadRequestOperation]:https://github.com/steipete/AFDownloadRequestOperation-->
+HYNetworking被许可在MIT协议下使用。查阅 [LICENSE](LICENSE) 文件来获得更多信息。
