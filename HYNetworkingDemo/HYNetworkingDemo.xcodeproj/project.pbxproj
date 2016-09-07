@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		963573741D8036F500C0EFD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573731D8036F500C0EFD0 /* main.m */; };
+		963573771D8036F500C0EFD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573761D8036F500C0EFD0 /* AppDelegate.m */; };
+		9635737A1D8036F500C0EFD0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573791D8036F500C0EFD0 /* ViewController.m */; };
+		9635737D1D8036F500C0EFD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9635737B1D8036F500C0EFD0 /* Main.storyboard */; };
+		9635737F1D8036F500C0EFD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9635737E1D8036F500C0EFD0 /* Assets.xcassets */; };
+		963573821D8036F500C0EFD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963573801D8036F500C0EFD0 /* LaunchScreen.storyboard */; };
+		963573B21D80370E00C0EFD0 /* HYAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9635738D1D80370E00C0EFD0 /* HYAPIManager.m */; };
+		963573B31D80370E00C0EFD0 /* HYAPIProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573901D80370E00C0EFD0 /* HYAPIProxy.m */; };
+		963573B41D80370E00C0EFD0 /* NSObject+HYNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573931D80370E00C0EFD0 /* NSObject+HYNetworkingMethods.m */; };
+		963573B51D80370E00C0EFD0 /* NSURLRequest+HYNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573951D80370E00C0EFD0 /* NSURLRequest+HYNetworkingMethods.m */; };
+		963573B61D80370E00C0EFD0 /* HYCommonParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573981D80370E00C0EFD0 /* HYCommonParams.m */; };
+		963573B71D80370E00C0EFD0 /* HYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9635739B1D80370E00C0EFD0 /* HYLogger.m */; };
+		963573B81D80370E00C0EFD0 /* HYRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9635739E1D80370E00C0EFD0 /* HYRequestManager.m */; };
+		963573B91D80370E00C0EFD0 /* HYRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573A11D80370E00C0EFD0 /* HYRequestService.m */; };
+		963573BA1D80370E00C0EFD0 /* HYRequestServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573A31D80370E00C0EFD0 /* HYRequestServiceFactory.m */; };
+		963573BB1D80370E00C0EFD0 /* HYResponseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573A61D80370E00C0EFD0 /* HYResponseManager.m */; };
+		963573BC1D80370E00C0EFD0 /* HYBaseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573AA1D80370E00C0EFD0 /* HYBaseAPIManager.m */; };
+		963573BD1D80370E00C0EFD0 /* HYCustomRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573AD1D80370E00C0EFD0 /* HYCustomRequestService.m */; };
+		963573BE1D80370E00C0EFD0 /* HYNetworkConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 963573AE1D80370E00C0EFD0 /* HYNetworkConfiguration.plist */; };
+		963573BF1D80370E00C0EFD0 /* HYNetworkContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573B11D80370E00C0EFD0 /* HYNetworkContext.m */; };
+		963573C31D80375000C0EFD0 /* HYTestAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573C21D80375000C0EFD0 /* HYTestAPIManager.m */; };
+		963573D21D8037A800C0EFD0 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573C61D8037A800C0EFD0 /* AFHTTPSessionManager.m */; };
+		963573D31D8037A800C0EFD0 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573C91D8037A800C0EFD0 /* AFNetworkReachabilityManager.m */; };
+		963573D41D8037A800C0EFD0 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573CB1D8037A800C0EFD0 /* AFSecurityPolicy.m */; };
+		963573D51D8037A800C0EFD0 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573CD1D8037A800C0EFD0 /* AFURLRequestSerialization.m */; };
+		963573D61D8037A800C0EFD0 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573CF1D8037A800C0EFD0 /* AFURLResponseSerialization.m */; };
+		963573D71D8037A800C0EFD0 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 963573D11D8037A800C0EFD0 /* AFURLSessionManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9635736F1D8036F500C0EFD0 /* HYNetworkingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYNetworkingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		963573731D8036F500C0EFD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		963573751D8036F500C0EFD0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		963573761D8036F500C0EFD0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		963573781D8036F500C0EFD0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		963573791D8036F500C0EFD0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9635737C1D8036F500C0EFD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9635737E1D8036F500C0EFD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		963573811D8036F500C0EFD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		963573831D8036F500C0EFD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9635738C1D80370E00C0EFD0 /* HYAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAPIManager.h; sourceTree = "<group>"; };
+		9635738D1D80370E00C0EFD0 /* HYAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAPIManager.m; sourceTree = "<group>"; };
+		9635738F1D80370E00C0EFD0 /* HYAPIProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAPIProxy.h; sourceTree = "<group>"; };
+		963573901D80370E00C0EFD0 /* HYAPIProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAPIProxy.m; sourceTree = "<group>"; };
+		963573921D80370E00C0EFD0 /* NSObject+HYNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HYNetworkingMethods.h"; sourceTree = "<group>"; };
+		963573931D80370E00C0EFD0 /* NSObject+HYNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HYNetworkingMethods.m"; sourceTree = "<group>"; };
+		963573941D80370E00C0EFD0 /* NSURLRequest+HYNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+HYNetworkingMethods.h"; sourceTree = "<group>"; };
+		963573951D80370E00C0EFD0 /* NSURLRequest+HYNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+HYNetworkingMethods.m"; sourceTree = "<group>"; };
+		963573971D80370E00C0EFD0 /* HYCommonParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYCommonParams.h; sourceTree = "<group>"; };
+		963573981D80370E00C0EFD0 /* HYCommonParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYCommonParams.m; sourceTree = "<group>"; };
+		9635739A1D80370E00C0EFD0 /* HYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLogger.h; sourceTree = "<group>"; };
+		9635739B1D80370E00C0EFD0 /* HYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLogger.m; sourceTree = "<group>"; };
+		9635739D1D80370E00C0EFD0 /* HYRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYRequestManager.h; sourceTree = "<group>"; };
+		9635739E1D80370E00C0EFD0 /* HYRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYRequestManager.m; sourceTree = "<group>"; };
+		963573A01D80370E00C0EFD0 /* HYRequestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYRequestService.h; sourceTree = "<group>"; };
+		963573A11D80370E00C0EFD0 /* HYRequestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYRequestService.m; sourceTree = "<group>"; };
+		963573A21D80370E00C0EFD0 /* HYRequestServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYRequestServiceFactory.h; sourceTree = "<group>"; };
+		963573A31D80370E00C0EFD0 /* HYRequestServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYRequestServiceFactory.m; sourceTree = "<group>"; };
+		963573A51D80370E00C0EFD0 /* HYResponseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYResponseManager.h; sourceTree = "<group>"; };
+		963573A61D80370E00C0EFD0 /* HYResponseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYResponseManager.m; sourceTree = "<group>"; };
+		963573A91D80370E00C0EFD0 /* HYBaseAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBaseAPIManager.h; sourceTree = "<group>"; };
+		963573AA1D80370E00C0EFD0 /* HYBaseAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBaseAPIManager.m; sourceTree = "<group>"; };
+		963573AC1D80370E00C0EFD0 /* HYCustomRequestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYCustomRequestService.h; sourceTree = "<group>"; };
+		963573AD1D80370E00C0EFD0 /* HYCustomRequestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYCustomRequestService.m; sourceTree = "<group>"; };
+		963573AE1D80370E00C0EFD0 /* HYNetworkConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HYNetworkConfiguration.plist; sourceTree = "<group>"; };
+		963573B01D80370E00C0EFD0 /* HYNetworkContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYNetworkContext.h; sourceTree = "<group>"; };
+		963573B11D80370E00C0EFD0 /* HYNetworkContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYNetworkContext.m; sourceTree = "<group>"; };
+		963573C11D80375000C0EFD0 /* HYTestAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTestAPIManager.h; sourceTree = "<group>"; };
+		963573C21D80375000C0EFD0 /* HYTestAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTestAPIManager.m; sourceTree = "<group>"; };
+		963573C51D8037A800C0EFD0 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		963573C61D8037A800C0EFD0 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		963573C71D8037A800C0EFD0 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		963573C81D8037A800C0EFD0 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		963573C91D8037A800C0EFD0 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		963573CA1D8037A800C0EFD0 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		963573CB1D8037A800C0EFD0 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		963573CC1D8037A800C0EFD0 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		963573CD1D8037A800C0EFD0 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		963573CE1D8037A800C0EFD0 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		963573CF1D8037A800C0EFD0 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		963573D01D8037A800C0EFD0 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		963573D11D8037A800C0EFD0 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9635736C1D8036F500C0EFD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		963573661D8036F400C0EFD0 = {
+			isa = PBXGroup;
+			children = (
+				963573C41D8037A800C0EFD0 /* AFNetworking */,
+				963573891D80370E00C0EFD0 /* HYNetworking */,
+				963573711D8036F500C0EFD0 /* HYNetworkingDemo */,
+				963573701D8036F500C0EFD0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		963573701D8036F500C0EFD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9635736F1D8036F500C0EFD0 /* HYNetworkingDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		963573711D8036F500C0EFD0 /* HYNetworkingDemo */ = {
+			isa = PBXGroup;
+			children = (
+				963573C01D80375000C0EFD0 /* TestApiManager */,
+				963573751D8036F500C0EFD0 /* AppDelegate.h */,
+				963573761D8036F500C0EFD0 /* AppDelegate.m */,
+				963573781D8036F500C0EFD0 /* ViewController.h */,
+				963573791D8036F500C0EFD0 /* ViewController.m */,
+				9635737B1D8036F500C0EFD0 /* Main.storyboard */,
+				9635737E1D8036F500C0EFD0 /* Assets.xcassets */,
+				963573801D8036F500C0EFD0 /* LaunchScreen.storyboard */,
+				963573831D8036F500C0EFD0 /* Info.plist */,
+				963573721D8036F500C0EFD0 /* Supporting Files */,
+			);
+			path = HYNetworkingDemo;
+			sourceTree = "<group>";
+		};
+		963573721D8036F500C0EFD0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				963573731D8036F500C0EFD0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		963573891D80370E00C0EFD0 /* HYNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				9635738A1D80370E00C0EFD0 /* HYNetworking */,
+				963573A71D80370E00C0EFD0 /* HYNetworkingCustom */,
+			);
+			path = HYNetworking;
+			sourceTree = "<group>";
+		};
+		9635738A1D80370E00C0EFD0 /* HYNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				9635738B1D80370E00C0EFD0 /* APIManager */,
+				9635738E1D80370E00C0EFD0 /* APIProxy */,
+				963573911D80370E00C0EFD0 /* Categories */,
+				963573961D80370E00C0EFD0 /* CommonParams */,
+				963573991D80370E00C0EFD0 /* Logger */,
+				9635739C1D80370E00C0EFD0 /* RequestManager */,
+				963573A41D80370E00C0EFD0 /* ResponseManager */,
+			);
+			path = HYNetworking;
+			sourceTree = "<group>";
+		};
+		9635738B1D80370E00C0EFD0 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				9635738C1D80370E00C0EFD0 /* HYAPIManager.h */,
+				9635738D1D80370E00C0EFD0 /* HYAPIManager.m */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		9635738E1D80370E00C0EFD0 /* APIProxy */ = {
+			isa = PBXGroup;
+			children = (
+				9635738F1D80370E00C0EFD0 /* HYAPIProxy.h */,
+				963573901D80370E00C0EFD0 /* HYAPIProxy.m */,
+			);
+			path = APIProxy;
+			sourceTree = "<group>";
+		};
+		963573911D80370E00C0EFD0 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				963573921D80370E00C0EFD0 /* NSObject+HYNetworkingMethods.h */,
+				963573931D80370E00C0EFD0 /* NSObject+HYNetworkingMethods.m */,
+				963573941D80370E00C0EFD0 /* NSURLRequest+HYNetworkingMethods.h */,
+				963573951D80370E00C0EFD0 /* NSURLRequest+HYNetworkingMethods.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		963573961D80370E00C0EFD0 /* CommonParams */ = {
+			isa = PBXGroup;
+			children = (
+				963573971D80370E00C0EFD0 /* HYCommonParams.h */,
+				963573981D80370E00C0EFD0 /* HYCommonParams.m */,
+			);
+			path = CommonParams;
+			sourceTree = "<group>";
+		};
+		963573991D80370E00C0EFD0 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				9635739A1D80370E00C0EFD0 /* HYLogger.h */,
+				9635739B1D80370E00C0EFD0 /* HYLogger.m */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		9635739C1D80370E00C0EFD0 /* RequestManager */ = {
+			isa = PBXGroup;
+			children = (
+				9635739D1D80370E00C0EFD0 /* HYRequestManager.h */,
+				9635739E1D80370E00C0EFD0 /* HYRequestManager.m */,
+				9635739F1D80370E00C0EFD0 /* RequestService */,
+			);
+			path = RequestManager;
+			sourceTree = "<group>";
+		};
+		9635739F1D80370E00C0EFD0 /* RequestService */ = {
+			isa = PBXGroup;
+			children = (
+				963573A01D80370E00C0EFD0 /* HYRequestService.h */,
+				963573A11D80370E00C0EFD0 /* HYRequestService.m */,
+				963573A21D80370E00C0EFD0 /* HYRequestServiceFactory.h */,
+				963573A31D80370E00C0EFD0 /* HYRequestServiceFactory.m */,
+			);
+			path = RequestService;
+			sourceTree = "<group>";
+		};
+		963573A41D80370E00C0EFD0 /* ResponseManager */ = {
+			isa = PBXGroup;
+			children = (
+				963573A51D80370E00C0EFD0 /* HYResponseManager.h */,
+				963573A61D80370E00C0EFD0 /* HYResponseManager.m */,
+			);
+			path = ResponseManager;
+			sourceTree = "<group>";
+		};
+		963573A71D80370E00C0EFD0 /* HYNetworkingCustom */ = {
+			isa = PBXGroup;
+			children = (
+				963573A81D80370E00C0EFD0 /* APIBaseManager */,
+				963573AB1D80370E00C0EFD0 /* CustomRequestService */,
+				963573AE1D80370E00C0EFD0 /* HYNetworkConfiguration.plist */,
+				963573AF1D80370E00C0EFD0 /* NetworkContext */,
+			);
+			path = HYNetworkingCustom;
+			sourceTree = "<group>";
+		};
+		963573A81D80370E00C0EFD0 /* APIBaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				963573A91D80370E00C0EFD0 /* HYBaseAPIManager.h */,
+				963573AA1D80370E00C0EFD0 /* HYBaseAPIManager.m */,
+			);
+			path = APIBaseManager;
+			sourceTree = "<group>";
+		};
+		963573AB1D80370E00C0EFD0 /* CustomRequestService */ = {
+			isa = PBXGroup;
+			children = (
+				963573AC1D80370E00C0EFD0 /* HYCustomRequestService.h */,
+				963573AD1D80370E00C0EFD0 /* HYCustomRequestService.m */,
+			);
+			path = CustomRequestService;
+			sourceTree = "<group>";
+		};
+		963573AF1D80370E00C0EFD0 /* NetworkContext */ = {
+			isa = PBXGroup;
+			children = (
+				963573B01D80370E00C0EFD0 /* HYNetworkContext.h */,
+				963573B11D80370E00C0EFD0 /* HYNetworkContext.m */,
+			);
+			path = NetworkContext;
+			sourceTree = "<group>";
+		};
+		963573C01D80375000C0EFD0 /* TestApiManager */ = {
+			isa = PBXGroup;
+			children = (
+				963573C11D80375000C0EFD0 /* HYTestAPIManager.h */,
+				963573C21D80375000C0EFD0 /* HYTestAPIManager.m */,
+			);
+			path = TestApiManager;
+			sourceTree = "<group>";
+		};
+		963573C41D8037A800C0EFD0 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				963573C51D8037A800C0EFD0 /* AFHTTPSessionManager.h */,
+				963573C61D8037A800C0EFD0 /* AFHTTPSessionManager.m */,
+				963573C71D8037A800C0EFD0 /* AFNetworking.h */,
+				963573C81D8037A800C0EFD0 /* AFNetworkReachabilityManager.h */,
+				963573C91D8037A800C0EFD0 /* AFNetworkReachabilityManager.m */,
+				963573CA1D8037A800C0EFD0 /* AFSecurityPolicy.h */,
+				963573CB1D8037A800C0EFD0 /* AFSecurityPolicy.m */,
+				963573CC1D8037A800C0EFD0 /* AFURLRequestSerialization.h */,
+				963573CD1D8037A800C0EFD0 /* AFURLRequestSerialization.m */,
+				963573CE1D8037A800C0EFD0 /* AFURLResponseSerialization.h */,
+				963573CF1D8037A800C0EFD0 /* AFURLResponseSerialization.m */,
+				963573D01D8037A800C0EFD0 /* AFURLSessionManager.h */,
+				963573D11D8037A800C0EFD0 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9635736E1D8036F500C0EFD0 /* HYNetworkingDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 963573861D8036F500C0EFD0 /* Build configuration list for PBXNativeTarget "HYNetworkingDemo" */;
+			buildPhases = (
+				9635736B1D8036F500C0EFD0 /* Sources */,
+				9635736C1D8036F500C0EFD0 /* Frameworks */,
+				9635736D1D8036F500C0EFD0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HYNetworkingDemo;
+			productName = HYNetworkingDemo;
+			productReference = 9635736F1D8036F500C0EFD0 /* HYNetworkingDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		963573671D8036F400C0EFD0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = hyyy;
+				TargetAttributes = {
+					9635736E1D8036F500C0EFD0 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 9635736A1D8036F500C0EFD0 /* Build configuration list for PBXProject "HYNetworkingDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 963573661D8036F400C0EFD0;
+			productRefGroup = 963573701D8036F500C0EFD0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9635736E1D8036F500C0EFD0 /* HYNetworkingDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9635736D1D8036F500C0EFD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				963573821D8036F500C0EFD0 /* LaunchScreen.storyboard in Resources */,
+				963573BE1D80370E00C0EFD0 /* HYNetworkConfiguration.plist in Resources */,
+				9635737F1D8036F500C0EFD0 /* Assets.xcassets in Resources */,
+				9635737D1D8036F500C0EFD0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9635736B1D8036F500C0EFD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				963573B81D80370E00C0EFD0 /* HYRequestManager.m in Sources */,
+				963573B31D80370E00C0EFD0 /* HYAPIProxy.m in Sources */,
+				963573B61D80370E00C0EFD0 /* HYCommonParams.m in Sources */,
+				963573D21D8037A800C0EFD0 /* AFHTTPSessionManager.m in Sources */,
+				963573D61D8037A800C0EFD0 /* AFURLResponseSerialization.m in Sources */,
+				9635737A1D8036F500C0EFD0 /* ViewController.m in Sources */,
+				963573D31D8037A800C0EFD0 /* AFNetworkReachabilityManager.m in Sources */,
+				963573771D8036F500C0EFD0 /* AppDelegate.m in Sources */,
+				963573C31D80375000C0EFD0 /* HYTestAPIManager.m in Sources */,
+				963573741D8036F500C0EFD0 /* main.m in Sources */,
+				963573BC1D80370E00C0EFD0 /* HYBaseAPIManager.m in Sources */,
+				963573B71D80370E00C0EFD0 /* HYLogger.m in Sources */,
+				963573BA1D80370E00C0EFD0 /* HYRequestServiceFactory.m in Sources */,
+				963573D51D8037A800C0EFD0 /* AFURLRequestSerialization.m in Sources */,
+				963573B51D80370E00C0EFD0 /* NSURLRequest+HYNetworkingMethods.m in Sources */,
+				963573B91D80370E00C0EFD0 /* HYRequestService.m in Sources */,
+				963573BB1D80370E00C0EFD0 /* HYResponseManager.m in Sources */,
+				963573B21D80370E00C0EFD0 /* HYAPIManager.m in Sources */,
+				963573D41D8037A800C0EFD0 /* AFSecurityPolicy.m in Sources */,
+				963573BF1D80370E00C0EFD0 /* HYNetworkContext.m in Sources */,
+				963573BD1D80370E00C0EFD0 /* HYCustomRequestService.m in Sources */,
+				963573B41D80370E00C0EFD0 /* NSObject+HYNetworkingMethods.m in Sources */,
+				963573D71D8037A800C0EFD0 /* AFURLSessionManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9635737B1D8036F500C0EFD0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9635737C1D8036F500C0EFD0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		963573801D8036F500C0EFD0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				963573811D8036F500C0EFD0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		963573841D8036F500C0EFD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		963573851D8036F500C0EFD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		963573871D8036F500C0EFD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HYNetworkingDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyyy.HYNetworkingDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		963573881D8036F500C0EFD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HYNetworkingDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyyy.HYNetworkingDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9635736A1D8036F500C0EFD0 /* Build configuration list for PBXProject "HYNetworkingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				963573841D8036F500C0EFD0 /* Debug */,
+				963573851D8036F500C0EFD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		963573861D8036F500C0EFD0 /* Build configuration list for PBXNativeTarget "HYNetworkingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				963573871D8036F500C0EFD0 /* Debug */,
+				963573881D8036F500C0EFD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 963573671D8036F400C0EFD0 /* Project object */;
+}
