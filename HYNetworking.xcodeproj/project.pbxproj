@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F6786660CE2A54B55686DE8 /* libPods-HYNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE863067E5036EFBB708392 /* libPods-HYNetworking.a */; };
 		9609A7311D6EBD2500F11E76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9609A7301D6EBD2500F11E76 /* main.m */; };
 		9609A7341D6EBD2500F11E76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9609A7331D6EBD2500F11E76 /* AppDelegate.m */; };
 		9609A7371D6EBD2500F11E76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9609A7361D6EBD2500F11E76 /* ViewController.m */; };
@@ -29,11 +28,15 @@
 		96C43A3F1D7671F6002A7373 /* HYCustomRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A3E1D7671F6002A7373 /* HYCustomRequestService.m */; };
 		96C43A421D7682D9002A7373 /* NSObject+HYNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A411D7682D9002A7373 /* NSObject+HYNetworkingMethods.m */; };
 		96C43A4A1D783F60002A7373 /* HYTestAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C43A491D783F60002A7373 /* HYTestAPIManager.m */; };
+		96FC50911D80118400D46329 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC50851D80118400D46329 /* AFHTTPSessionManager.m */; };
+		96FC50921D80118400D46329 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC50881D80118400D46329 /* AFNetworkReachabilityManager.m */; };
+		96FC50931D80118400D46329 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC508A1D80118400D46329 /* AFSecurityPolicy.m */; };
+		96FC50941D80118400D46329 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC508C1D80118400D46329 /* AFURLRequestSerialization.m */; };
+		96FC50951D80118400D46329 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC508E1D80118400D46329 /* AFURLResponseSerialization.m */; };
+		96FC50961D80118400D46329 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC50901D80118400D46329 /* AFURLSessionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4CE863067E5036EFBB708392 /* libPods-HYNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HYNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		75ACD643A5BB9431D65F3F69 /* Pods-HYNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYNetworking.release.xcconfig"; path = "Pods/Target Support Files/Pods-HYNetworking/Pods-HYNetworking.release.xcconfig"; sourceTree = "<group>"; };
 		9609A72C1D6EBD2400F11E76 /* HYNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9609A7301D6EBD2500F11E76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9609A7321D6EBD2500F11E76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,7 +76,19 @@
 		96C43A411D7682D9002A7373 /* NSObject+HYNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+HYNetworkingMethods.m"; path = "HYNetworking/Categories/NSObject+HYNetworkingMethods.m"; sourceTree = "<group>"; };
 		96C43A481D783F60002A7373 /* HYTestAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HYTestAPIManager.h; path = Test/HYTestAPIManager.h; sourceTree = "<group>"; };
 		96C43A491D783F60002A7373 /* HYTestAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HYTestAPIManager.m; path = Test/HYTestAPIManager.m; sourceTree = "<group>"; };
-		AD4E8F17EEE3E71E6454968F /* Pods-HYNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYNetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HYNetworking/Pods-HYNetworking.debug.xcconfig"; sourceTree = "<group>"; };
+		96FC50841D80118400D46329 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		96FC50851D80118400D46329 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		96FC50861D80118400D46329 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		96FC50871D80118400D46329 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		96FC50881D80118400D46329 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		96FC50891D80118400D46329 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		96FC508A1D80118400D46329 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		96FC508B1D80118400D46329 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		96FC508C1D80118400D46329 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		96FC508D1D80118400D46329 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		96FC508E1D80118400D46329 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		96FC508F1D80118400D46329 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		96FC50901D80118400D46329 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,37 +96,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F6786660CE2A54B55686DE8 /* libPods-HYNetworking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		39E4AE0FCC3C3718C9AF4FB9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AD4E8F17EEE3E71E6454968F /* Pods-HYNetworking.debug.xcconfig */,
-				75ACD643A5BB9431D65F3F69 /* Pods-HYNetworking.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		5BE73D31020A2518D8A26599 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4CE863067E5036EFBB708392 /* libPods-HYNetworking.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		9609A7231D6EBD2400F11E76 = {
 			isa = PBXGroup;
 			children = (
+				96FC50831D80118400D46329 /* AFNetworking */,
 				9609A72E1D6EBD2400F11E76 /* HYNetworking */,
 				9609A72D1D6EBD2400F11E76 /* Products */,
-				39E4AE0FCC3C3718C9AF4FB9 /* Pods */,
-				5BE73D31020A2518D8A26599 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -289,6 +285,26 @@
 			name = Test;
 			sourceTree = "<group>";
 		};
+		96FC50831D80118400D46329 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				96FC50841D80118400D46329 /* AFHTTPSessionManager.h */,
+				96FC50851D80118400D46329 /* AFHTTPSessionManager.m */,
+				96FC50861D80118400D46329 /* AFNetworking.h */,
+				96FC50871D80118400D46329 /* AFNetworkReachabilityManager.h */,
+				96FC50881D80118400D46329 /* AFNetworkReachabilityManager.m */,
+				96FC50891D80118400D46329 /* AFSecurityPolicy.h */,
+				96FC508A1D80118400D46329 /* AFSecurityPolicy.m */,
+				96FC508B1D80118400D46329 /* AFURLRequestSerialization.h */,
+				96FC508C1D80118400D46329 /* AFURLRequestSerialization.m */,
+				96FC508D1D80118400D46329 /* AFURLResponseSerialization.h */,
+				96FC508E1D80118400D46329 /* AFURLResponseSerialization.m */,
+				96FC508F1D80118400D46329 /* AFURLSessionManager.h */,
+				96FC50901D80118400D46329 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -296,12 +312,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9609A7431D6EBD2500F11E76 /* Build configuration list for PBXNativeTarget "HYNetworking" */;
 			buildPhases = (
-				8EBC64C27503D037C4917ED3 /* [CP] Check Pods Manifest.lock */,
 				9609A7281D6EBD2400F11E76 /* Sources */,
 				9609A7291D6EBD2400F11E76 /* Frameworks */,
 				9609A72A1D6EBD2400F11E76 /* Resources */,
-				1425D6E44E64AD0B2645B411 /* [CP] Embed Pods Frameworks */,
-				2C728F0663360FCBE5C21D4D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -358,54 +371,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		1425D6E44E64AD0B2645B411 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HYNetworking/Pods-HYNetworking-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2C728F0663360FCBE5C21D4D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HYNetworking/Pods-HYNetworking-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8EBC64C27503D037C4917ED3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		9609A7281D6EBD2400F11E76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -414,20 +379,26 @@
 				96C43A3B1D766EDD002A7373 /* HYRequestServiceFactory.m in Sources */,
 				9609A74A1D6EC4F300F11E76 /* HYAPIProxy.m in Sources */,
 				966606731D7967B100FACD49 /* HYAPIManager.m in Sources */,
+				96FC50911D80118400D46329 /* AFHTTPSessionManager.m in Sources */,
+				96FC50951D80118400D46329 /* AFURLResponseSerialization.m in Sources */,
 				96C43A4A1D783F60002A7373 /* HYTestAPIManager.m in Sources */,
+				96FC50921D80118400D46329 /* AFNetworkReachabilityManager.m in Sources */,
 				96C43A311D758550002A7373 /* HYLogger.m in Sources */,
 				96C43A341D766CAC002A7373 /* HYRequestManager.m in Sources */,
 				96C43A291D752963002A7373 /* HYResponseManager.m in Sources */,
 				96C43A3F1D7671F6002A7373 /* HYCustomRequestService.m in Sources */,
 				96C43A251D7437C5002A7373 /* HYCommonParams.m in Sources */,
 				96C43A381D766D5B002A7373 /* HYRequestService.m in Sources */,
+				96FC50941D80118400D46329 /* AFURLRequestSerialization.m in Sources */,
 				96A20C611D797BED00D962B2 /* HYBaseAPIManager.m in Sources */,
 				9609A7371D6EBD2500F11E76 /* ViewController.m in Sources */,
 				96C43A2D1D7530E0002A7373 /* NSURLRequest+HYNetworkingMethods.m in Sources */,
 				9609A7341D6EBD2500F11E76 /* AppDelegate.m in Sources */,
+				96FC50931D80118400D46329 /* AFSecurityPolicy.m in Sources */,
 				96BA38ED1D7D10680008925F /* HYNetworkContext.m in Sources */,
 				9609A7311D6EBD2500F11E76 /* main.m in Sources */,
 				96C43A421D7682D9002A7373 /* NSObject+HYNetworkingMethods.m in Sources */,
+				96FC50961D80118400D46329 /* AFURLSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,7 +508,6 @@
 		};
 		9609A7441D6EBD2500F11E76 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD4E8F17EEE3E71E6454968F /* Pods-HYNetworking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HYNetworking/Info.plist;
@@ -549,7 +519,6 @@
 		};
 		9609A7451D6EBD2500F11E76 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75ACD643A5BB9431D65F3F69 /* Pods-HYNetworking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HYNetworking/Info.plist;

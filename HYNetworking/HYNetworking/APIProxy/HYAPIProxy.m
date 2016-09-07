@@ -7,8 +7,8 @@
 //
 
 #import "HYAPIProxy.h"
-#import <AFNetworking/AFNetworking.h>
 #import "HYRequestManager.h"
+#import "AFHTTPSessionManager.h"
 
 @interface HYAPIProxy()
 
